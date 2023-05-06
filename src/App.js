@@ -6,15 +6,12 @@ import { BookRoutes } from './BookRoutes';
 
 function App() {
     const location = useLocation();
-    console.log(location);
     return (
         <>
             <nav>
                 <ul>
                     <li>
-                        <NavLink to="/" state="Hi">
-                            Home
-                        </NavLink>
+                        <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
                         {/* If we use end then it will only show it as active when it is active and not when its childrens are active like
@@ -33,6 +30,7 @@ function App() {
                     </li>
                 </ul>
             </nav>
+            {location.state}
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/books/*" element={<BookRoutes />} />
