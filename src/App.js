@@ -5,6 +5,7 @@ import { Booklist } from './pages/Booklist';
 import { Book } from './pages/Book';
 import { NewBook } from './pages/NewBook';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { BookLayout } from './BookLayout';
 
 function App() {
     return (
@@ -21,7 +22,7 @@ function App() {
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/books">
+                <Route path="/books" element={<BookLayout />}>
                     <Route index element={<Booklist />} />
                     <Route path=":id" element={<Book />} />
                     <Route path="new" element={<NewBook />} />
