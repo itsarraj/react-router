@@ -1,5 +1,5 @@
 import './App.css';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, useRoutes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Booklist } from './pages/Booklist';
 import { Book } from './pages/Book';
@@ -10,21 +10,22 @@ import { BookRoutes } from './BookRoutes';
 
 function App() {
     // Stating Routes using JS now
-
+    let element = useRoutes([
+        {
+            path: '/',
+            element: <Home />,
+        },
+        {
+            path: '*',
+            element: <NotFoundPage />,
+        },
+        {
+            path: '/books/*',
+            element: <BookRoutes />,
+        },
+    ]);
     return (
         <>
-            <Routes>
-                <Route
-                    path="/books/*"
-                    element={
-                        <h1>
-                            Extra Content for /books/* means all after
-                            "/books/anything" router only
-                        </h1>
-                    }
-                    // This is usefull if we want to show some specific content on specific routes
-                />
-            </Routes>
             <nav>
                 <ul>
                     <li>
@@ -35,11 +36,12 @@ function App() {
                     </li>
                 </ul>
             </nav>
-            <Routes>
+            {element}
+            {/* <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/books/*" element={<BookRoutes />} />
                 <Route path="*" element={<NotFoundPage />} />
-            </Routes>
+            </Routes> */}
         </>
     );
 }
