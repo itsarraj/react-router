@@ -12,8 +12,8 @@ function App() {
             <nav>
                 <ul>
                     <li>
-                        {/* What replace does is that it replaces the last 1 visit from history , take an example you are on login page and you logged in then you won't want that user go back to login page so we use replace only in such cases or if there is any other use case . */}
-                        <Link to="/" replace>
+                        {/* What reloadDocument does is that it reloads the page  */}
+                        <Link to="/" reloadDocument>
                             Home
                         </Link>
                     </li>
