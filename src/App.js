@@ -20,7 +20,9 @@ function App() {
                             }}
                             to="/"
                         >
-                            Home
+                            {({ isActive }) => {
+                                return isActive ? 'Active Home' : 'home';
+                            }}
                         </NavLink>
                     </li>
                     <li>
