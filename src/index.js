@@ -4,17 +4,16 @@ import './index.css';
 import App from './App';
 
 /**
- * Importing StaticRouter if you render all your component on server
- * if we are doing server side rendering it is usefull
+ * Importing NavtiveRouter for react native
  */
 
-import { StaticRouter } from 'react-router-dom/server';
+import { NavtiveRouter } from '{Use ReactNative here}';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <StaticRouter>
+    <NavtiveRouter>
         <React.StrictMode>
             <App />
         </React.StrictMode>
-    </StaticRouter>
+    </NavtiveRouter>
 );
