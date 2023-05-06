@@ -3,6 +3,8 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Booklist } from './pages/Booklist';
 import { Book } from './pages/Book';
+import { NewBook } from './pages/NewBook';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 function App() {
     return (
@@ -19,7 +21,10 @@ function App() {
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/book" element={<Booklist />} />
+                <Route path="/books" element={<Booklist />} />
+                <Route path="/books/:id" element={<Book />} />
+                <Route path="/books/new" element={<NewBook />} />
+                <Route path="*" element={<NotFoundPage />} />
             </Routes>
         </>
     );

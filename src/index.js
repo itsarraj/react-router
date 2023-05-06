@@ -4,16 +4,16 @@ import './index.css';
 import App from './App';
 
 /**
- * Importing NavtiveRouter for react native
+ * Importing BrowserRouter  used for routing with reloading the application
  */
 
-import { NavtiveRouter } from '{Use ReactNative here}';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <NavtiveRouter>
+    <BrowserRouter>
         <React.StrictMode>
             <App />
         </React.StrictMode>
-    </NavtiveRouter>
+    </BrowserRouter>
 );
