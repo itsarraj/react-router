@@ -4,16 +4,16 @@ import './index.css';
 import App from './App';
 
 /**
- * Importing HashRouter used to hash the url instead of /books it will be like /#/books
+ * Importing unstable_HistoryRouter used to manipulate browser history
  */
 
-import { HashRouter } from 'react-router-dom';
+import { unstable_HistoryRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <HashRouter>
+    <unstable_HistoryRouter>
         <React.StrictMode>
             <App />
         </React.StrictMode>
-    </HashRouter>
+    </unstable_HistoryRouter>
 );
