@@ -1,3 +1,6 @@
+import { Navigate } from 'react-router-dom';
+
 export function NotFoundPage() {
-    return <h1> NotFoundPage </h1>;
+    return <Navigate to="/" />;
 }
+// this will redirect
