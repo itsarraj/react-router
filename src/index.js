@@ -4,16 +4,17 @@ import './index.css';
 import App from './App';
 
 /**
- * Importing unstable_HistoryRouter used to manipulate browser history
+ * Importing MemoryRouter used to store routes history in memory
+ * usefull when we are carrying out tests
  */
 
-import { unstable_HistoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <unstable_HistoryRouter>
+    <MemoryRouter>
         <React.StrictMode>
             <App />
         </React.StrictMode>
-    </unstable_HistoryRouter>
+    </MemoryRouter>
 );
