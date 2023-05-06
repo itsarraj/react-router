@@ -6,6 +6,7 @@ import { Book } from './pages/Book';
 import { NewBook } from './pages/NewBook';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { BookLayout } from './BookLayout';
+import { BookRoutes } from './BookRoutes';
 
 function App() {
     return (
@@ -29,15 +30,7 @@ function App() {
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/books" element={<BookLayout />}>
-                    <Route index element={<Booklist />} />
-                    <Route path=":id" element={<Book />} />
-                    <Route path="new" element={<NewBook />} />
-                </Route>
-
-                {/* <Route path="/books" element={<Booklist />} />
-                <Route path="/books/:id" element={<Book />} />
-                <Route path="/books/new" element={<NewBook />} /> */}
+                <Route path="/books/*" element={<BookRoutes />} />
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
         </>
