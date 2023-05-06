@@ -1,30 +1,13 @@
 import './App.css';
-import { Link, Route, Routes, useRoutes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
-import { Booklist } from './pages/Booklist';
-import { Book } from './pages/Book';
-import { NewBook } from './pages/NewBook';
 import { NotFoundPage } from './pages/NotFoundPage';
-import { BookLayout } from './BookLayout';
 import { BookRoutes } from './BookRoutes';
 
 function App() {
-    // Stating Routes using JS now
-    let element = useRoutes([
-        {
-            path: '/',
-            element: <Home />,
-        },
-        {
-            path: '*',
-            element: <NotFoundPage />,
-        },
-        {
-            path: '/books/*',
-            element: <BookRoutes />,
-        },
-    ]);
     return (
+        // Now onwards will only work in jsx part
+
         <>
             <nav>
                 <ul>
@@ -36,12 +19,11 @@ function App() {
                     </li>
                 </ul>
             </nav>
-            {element}
-            {/* <Routes>
+            <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/books/*" element={<BookRoutes />} />
                 <Route path="*" element={<NotFoundPage />} />
-            </Routes> */}
+            </Routes>
         </>
     );
 }
