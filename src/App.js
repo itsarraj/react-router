@@ -12,7 +12,10 @@ function App() {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        {/* What replace does is that it replaces the last 1 visit from history , take an example you are on login page and you logged in then you won't want that user go back to login page so we use replace only in such cases or if there is any other use case . */}
+                        <Link to="/" replace>
+                            Home
+                        </Link>
                     </li>
                     <li>
                         <Link to="/books">Books</Link>
