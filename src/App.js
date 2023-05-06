@@ -12,18 +12,9 @@ function App() {
             <nav>
                 <ul>
                     <li>
-                        {/* NavLink */}
-
-                        <NavLink
-                            style={({ isActive }) => {
-                                return isActive ? { color: 'red' } : {};
-                            }}
-                            to="/"
-                        >
-                            {({ isActive }) => {
-                                return isActive ? 'Active Home' : 'home';
-                            }}
-                        </NavLink>
+                        {/* NavLink give active by default see css it give class of active to it , color: red; is added in css and it works
+                         */}
+                        <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
                         <Link to="/books">Books</Link>
