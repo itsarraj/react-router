@@ -1,5 +1,5 @@
 import './App.css';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, NavLink, Route, Routes } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { BookRoutes } from './BookRoutes';
@@ -12,10 +12,16 @@ function App() {
             <nav>
                 <ul>
                     <li>
-                        {/*  state - it does not show up in url mostly useful */}
-                        <Link to="/" state={}>
+                        {/* NavLink */}
+
+                        <NavLink
+                            style={({ isActive }) => {
+                                return isActive ? { color: 'red' } : {};
+                            }}
+                            to="/"
+                        >
                             Home
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
                         <Link to="/books">Books</Link>
