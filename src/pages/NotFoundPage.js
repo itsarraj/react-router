@@ -7,7 +7,9 @@ export function NotFoundPage() {
 
     useEffect(() => {
         setTimeout(() => {
-            navigate('/');
+            // navigate('/');
+            navigate(-1); // used to go back once in history
+            // navigate(-2); // used to go back twice in history
         }, 1000);
     }, []);
 
