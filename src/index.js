@@ -4,16 +4,16 @@ import './index.css';
 import App from './App';
 
 /**
- * Importing BrowserRouter  used for routing with reloading the application
+ * Importing HashRouter used to hash the url instead of /books it will be like /#/books
  */
 
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
+    <HashRouter>
         <React.StrictMode>
             <App />
         </React.StrictMode>
-    </BrowserRouter>
+    </HashRouter>
 );
