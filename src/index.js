@@ -4,17 +4,17 @@ import './index.css';
 import App from './App';
 
 /**
- * Importing MemoryRouter used to store routes history in memory
- * usefull when we are carrying out tests
+ * Importing StaticRouter if you render all your component on server
+ * if we are doing server side rendering it is usefull
  */
 
-import { MemoryRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom/server';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <MemoryRouter>
+    <StaticRouter>
         <React.StrictMode>
             <App />
         </React.StrictMode>
-    </MemoryRouter>
+    </StaticRouter>
 );
