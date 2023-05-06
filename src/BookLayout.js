@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 export function BookLayout() {
     return (
@@ -9,6 +9,8 @@ export function BookLayout() {
             <br />
             <Link to="/books/new">New Book</Link>
             <br />
+            <Outlet />
+            {/* This Outlet Let's you render the current route  */}
         </>
     );
 }
