@@ -12,12 +12,22 @@ function App() {
             <nav>
                 <ul>
                     <li>
-                        {/* NavLink give active by default see css it give class of active to it , color: red; is added in css and it works
-                         */}
                         <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                        <Link to="/books">Books</Link>
+                        {/* If we use end then it will only show it as active when it is active and not when its childrens are active like
+                        if we are at route
+                        /books/1
+                        this is only active and
+                        not /books
+
+                        only if we use end in
+<NavLink end to="/books">
+
+                        */}
+                        <NavLink end to="/books">
+                            Books
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
