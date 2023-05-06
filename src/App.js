@@ -12,8 +12,8 @@ function App() {
             <nav>
                 <ul>
                     <li>
-                        {/* What reloadDocument does is that it reloads the page  */}
-                        <Link to="/" reloadDocument>
+                        {/*  state - it does not show up in url mostly useful */}
+                        <Link to="/" state={}>
                             Home
                         </Link>
                     </li>
