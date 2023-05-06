@@ -9,6 +9,8 @@ import { BookLayout } from './BookLayout';
 import { BookRoutes } from './BookRoutes';
 
 function App() {
+    // Stating Routes using JS now
+
     return (
         <>
             <Routes>
