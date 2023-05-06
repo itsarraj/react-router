@@ -9,7 +9,7 @@ export function BookLayout() {
             <br />
             <Link to="/books/new">New Book</Link>
             <br />
-            <Outlet />
+            <Outlet context={{ hello: 'Hello' }} />
             {/* This Outlet Let's you render the current route  */}
         </>
     );

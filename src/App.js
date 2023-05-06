@@ -13,7 +13,7 @@ function App() {
         <>
             <Routes>
                 <Route
-                    path="/books"
+                    path="/books/*"
                     element={<h1>Extra Content for /books router only </h1>}
                     // This is usefull if we want to show some specific content on specific routes
                 />
